@@ -22,12 +22,12 @@ if(get_post_meta($id, "customize",true)==='modle1'){
 
 
 
-<div id="right_shop" class="right_mian <?php if($modle_single){echo 'full_main'; }?>">
+<div id="right_shop" class="right_mian <?php if($modle_single){echo 'full_main'; }?><?php if(is_page( 13 ) || is_page( 14 )){echo 'sign_center';}?>">
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <div class="enter"> 
-<div class="title_page"><h1><?php the_title();?></h1><div class="des_page"> 
+<div class="title_page <?php if(is_page( 13 ) || is_page( 14 )){echo 'sign_all';}?>"><h1><?php the_title();?></h1><div class="des_page"> 
 </div>
 </div>
 <div class="single_contents">

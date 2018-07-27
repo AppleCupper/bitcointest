@@ -96,7 +96,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 			<div class="nav-wrapper">
 				<div class="col s12">
 					<div class="headerBar" style="display:inline-block;">
-						<img class="logo" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/752a7f_65b79537da274eb6a673687fdecd7b76_mv2_d_1600_1600_s_2.png'; ?>"><a class="headerLogo left hide-on-med-and-down" href="https://www.ico-china.info/">ICO-CHINA</a>
+						<img class="logo" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/752a7f_65b79537da274eb6a673687fdecd7b76_mv2_d_1600_1600_s_2.png'; ?>"><a class="headerLogo left hide-on-med-and-down" href="<?php echo home_url();?>">ICO-CHINA</a>
 						<p class="headerSubtitle">
 							数币中国
 						</p>
@@ -111,8 +111,21 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 						</li>
 						<li class=""><a><span>发布项目</span></a></li>
 						<li class=""><a><span>浏览项目</span></a></li>
-						<li class=""><a><span>登录</span></a></li>
-						<li class="menuItem headerSignup"><a><span>注册</span></a></li>
+						<?php if (function_exists( 'wc_get_page_id' ) ) {
+							$myaccount = get_permalink( 13 );
+							$signup = get_permalink( 14 );
+							$cart = get_permalink( wc_get_page_id( 'cart' ) );
+							if (is_user_logged_in()){
+								global $current_user;   
+								wp_get_current_user();
+								$user_ID = $current_user->ID ;
+								$login_html='<li class=""><a class="myaccount myreg" href="'.$myaccount.'"><span>'.$language_t4.'</span></a></li><li class="menuItem headerSignup"><a class="myaccount myreg"href="'. $cart.'"><span>'.$language_t5.'</span></a></li>';
+							}else{
+								$login_html='<li class=""><a class="myaccount " href="'.$myaccount.'">'.$language_t2.'</a></li><li class="menuItem headerSignup"><a class="myaccount myreg" href="'.$signup.'"><span>'.$language_t3.'</span></a></li>';
+							}
+							echo $login_html;
+						}
+						?>  
 						<li class="webCantSee"><a><span>投资流程</span></a></li>
 						<li class="webCantSee"><a><span>常见问题</span></a></li>
 						<li class="webCantSee"><a><span>手续费相关</span></a></li>
@@ -127,20 +140,8 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 						</span></a></li>
 						<li class=""><a><span>发布项目</span></a></li>
 						<li class=""><a><span>浏览项目</span></a></li>
-						<?php if (function_exists( 'wc_get_page_id' ) ) {
-							$myaccount = get_permalink( wc_get_page_id( 'myaccount' ) );
-							$cart = get_permalink( wc_get_page_id( 'cart' ) );
-							if (is_user_logged_in()){
-								global $current_user;   
-								wp_get_current_user();
-								$user_ID = $current_user->ID ;
-								$login_html='<li class=""><a class="myaccount myreg" href="'.$myaccount.'"><span>'.$language_t4.'</span></a></li><li class="menuItem headerSignup"><a class="myaccount myreg"href="'. $cart.'"><span>'.$language_t5.'</span></a></li>';
-							}else{
-								$login_html='<li class=""><a class="myaccount " href="'.$myaccount.'">'.$language_t2.'</a></li><li class="menuItem headerSignup"><a class="myaccount myreg" href="'.$myaccount.'"><span>'.$language_t3.'</span></a></li>';
-							}
-							echo $login_html;
-						}
-						?>  
+						<li class=""><a><span>登录</span></a></li>
+						<li class="menuItem headerSignup"><a><span>注册</span></a></li>
 						<li class="webCantSee"><a><span>投资流程</span></a></li>
 						<li class="webCantSee"><a><span>常见问题</span></a></li>
 						<li class="webCantSee"><a><span>手续费相关</span></a></li>
@@ -150,7 +151,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 			</div>
 			</nav>
 		</div>
-
+<?php /*
            <div class="header_top">
               <div class="header_top_in">
                    
@@ -221,7 +222,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
               </div>
    
    <div style="clear:both;"></div>
- 
+*/ ?>
    </div>
    
   

@@ -2,6 +2,7 @@
 
 
 include("options/data_cache.php"); ?>
+<?php /*
 <div class="footer">
 
 <div class="footer_in">
@@ -37,8 +38,8 @@ include("options/data_cache.php"); ?>
 </div>
 </div>
 
-
-<div class="footer_bottom">
+*/?>
+<div class="footer_bottom" style="display:none;">
 <div class="footer_in">
 
     
@@ -78,72 +79,72 @@ include("options/data_cache.php"); ?>
 
 
 </div>
+
 <?php  get_template_part( 'toolbar/toolbar' ); ?>
 
 
 
 <?php wp_footer(); echo  stripslashes(get_option('code_in_foot')); ?>
 <footer class="page-footer hide-on-med-and-down">
-			<div style="margin-left: 40px; margin-right: 40px; font-size: 0.8em;">
+	<div style="margin-left: 40px; margin-right: 40px; font-size: 0.8em;">
+		<div class="row">
+			<div class="col s12 m5">
+				<img class="imgCenter" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/752a7f_c46305890d6142348d7d59b7dba5a849_mv2.png'; ?>" style="width: 326px; height: 66px; object-fit: cover; margin-top: 50px;">
+			</div>
+			<div class="col s12 m3">
 				<div class="row">
-					<div class="col s12 m5">
-						<img class="imgCenter" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/752a7f_c46305890d6142348d7d59b7dba5a849_mv2.png'; ?>" style="width: 326px; height: 66px; object-fit: cover; margin-top: 50px;">
-					</div>
-					<div class="col s12 m3">
-						<div class="row">
-							<div class="col s12">
-								<ul>
-									<p class="grey-text text-lighten-3">
-										<span>联系我们</span>
-									</p>
-									<li class="grey-text text-lighten-3">email:<a href="mailto:contact@ico-china.info">contact@ico-china.info</a></li>
-									<li class="grey-text text-lighten-3">Telegram:<a href="https://t.me/HYICOchina" target="_blank">HYICOchina</a></li>
-								</ul>
-							</div>
-							<div class="col s6">
-								<img class="qrcode" src="https://s3-ap-northeast-1.amazonaws.com/ico-china/img/general/mYb0XWe.png">
-							</div>
-							<div class="col s6">
-								<img class="qrcode" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/qr_code_3.png'; ?>">
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m2">
+					<div class="col s12">
 						<ul>
 							<p class="grey-text text-lighten-3">
-								<span>关于我们</span>
+								<span>联系我们</span>
 							</p>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/aboutus"><span>简介</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/termofuse"><span>使用条款</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/privacypolicy"><span>隐私政策</span></a></li>
+							<li class="grey-text text-lighten-3">email:<a href="mailto:contact@ico-china.info">contact@ico-china.info</a></li>
+							<li class="grey-text text-lighten-3">Telegram:<a href="https://t.me/HYICOchina" target="_blank">HYICOchina</a></li>
 						</ul>
 					</div>
-					<div class="col s12 m2">
-						<ul>
-							<p class="grey-text text-lighten-3">
-								<span>平台</span>
-							</p>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/news?page=0"><span>公告</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/articles?page=0&amp;groupType=articles"><span>文章</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/slottingRequest"><span>发布项目</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/projects?page=0&amp;status=active"><span>浏览项目</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/tutorial"><span>投资流程</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/faq"><span>常见问题</span></a></li>
-							<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/fee"><span>手续费相关</span></a></li>
-							<select id="locale" style="display: block; font-size: 0.8em; height: 2em; margin-top: 10px;">
-								<option value="cn">中文</option>
-								<option value="en">English</option>
-							</select>
-						</ul>
+					<div class="col s6">
+						<img class="qrcode" src="https://s3-ap-northeast-1.amazonaws.com/ico-china/img/general/mYb0XWe.png">
+					</div>
+					<div class="col s6">
+						<img class="qrcode" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/qr_code_3.png'; ?>">
 					</div>
 				</div>
 			</div>
-			<div class="footer-copyright">
-				<div class="container" style="font-size: 0.8em; width: 80%;">
-					Copyright © 2017 ICO-CHINA, All Rights Reserved.
-				</div>
+			<div class="col s12 m2">
+				<ul>
+					<p class="grey-text text-lighten-3">
+						<span>关于我们</span>
+					</p>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/aboutus"><span>简介</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/termofuse"><span>使用条款</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/privacypolicy"><span>隐私政策</span></a></li>
+				</ul>
 			</div>
-			<script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/main.61dc0333.js'; ?>"></script>
+			<div class="col s12 m2">
+				<ul>
+					<p class="grey-text text-lighten-3">
+						<span>平台</span>
+					</p>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/news?page=0"><span>公告</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/articles?page=0&amp;groupType=articles"><span>文章</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/slottingRequest"><span>发布项目</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/projects?page=0&amp;status=active"><span>浏览项目</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/tutorial"><span>投资流程</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/faq"><span>常见问题</span></a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.ico-china.info/fee"><span>手续费相关</span></a></li>
+					<select id="locale" style="display: block; font-size: 0.8em; height: 2em; margin-top: 10px;">
+						<option value="cn">中文</option>
+						<option value="en">English</option>
+					</select>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container" style="font-size: 0.8em; width: 80%;">
+			Copyright © 2017 ICO-CHINA, All Rights Reserved.
+		</div>
+	</div>
 </body>
 <!--<?php echo get_num_queries() . ' queries in ' . timer_stop(0) . ' seconds.'; ?>-->	
 </html>

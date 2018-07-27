@@ -1,3 +1,6 @@
 nav ul a.menuItem:hover{background-color: rgba(0,0,0,0.1);}
 .toolbar,.toolbar:before,.toolbar:after{-webkit-box-sizing: content-box;box-sizing: content-box;}
 .content .container{font-size:1rem}
+.sign_center{width:60%;float:left;}
+.enter .sign_all{background:transparent;}
+.enter .sign_all h1{color:#005daa;text-align:center;font-size:2em;}
