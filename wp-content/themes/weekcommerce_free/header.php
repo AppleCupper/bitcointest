@@ -82,7 +82,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
    <div class="header">
    
 
-          <div class="main_top">
+          <?php /*<div class="main_top">
             <div class="main_top_in">
             
             <p><?php if(get_option("mytheme_gonggao")&& get_option("mytheme_gonggao")!="1"){echo get_option("mytheme_gonggao");}else{ if(get_option("mytheme_gonggao")!="1"){echo '请输出您的公告文字';}}?></p>
@@ -90,13 +90,13 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
             
             <div style="clear:both;"></div>
             </div>
-          </div>
+          </div>*/?>
 		<div class="navbar-fixed">
 			<nav class="white">
 			<div class="nav-wrapper">
 				<div class="col s12">
 					<div class="headerBar" style="display:inline-block;">
-						<img class="logo" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/752a7f_65b79537da274eb6a673687fdecd7b76_mv2_d_1600_1600_s_2.png'; ?>"><a class="headerLogo left hide-on-med-and-down" href="<?php echo home_url();?>">ICO-CHINA</a>
+						<img class="logo" src="<?php echo get_bloginfo('template_url').'/images/bitcoin/logobit.png'; ?>"><a class="headerLogo left hide-on-med-and-down" href="<?php echo home_url();?>">BIT-CHINA</a>
 						<p class="headerSubtitle">
 							数币中国
 						</p>

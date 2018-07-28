@@ -2,7 +2,7 @@
 <div class="toolbar">
 <div class="toolbar_line">
   <div class="toolbar_line_in"><?php if(class_exists('Woocommerce')){ ?>
-    <a <?php if(!is_account_page()){ echo ' href="'.get_permalink( wc_get_page_id( 'myaccount' ) ).'"';}else{$thiscss='s_account_page';} ?> class="my_tool_box mycenter_tool <?php echo $thiscss; ?>"><i></i><span class="pc_tool"><?php echo $mytheme_toolbar_t1; ?></span><span class="move_tool"><?php echo $mytheme_toolbar_tm1; ?></span></a>
+    <a <?php if(!is_account_page()){ echo ' href="'.get_permalink( 13 ).'"';}else{$thiscss='s_account_page';} ?> class="my_tool_box mycenter_tool <?php echo $thiscss; ?>"><i></i><span class="pc_tool"><?php echo $mytheme_toolbar_t1; ?></span><span class="move_tool"><?php echo $mytheme_toolbar_tm1; ?></span></a>
     
     <a  class="my_tool_box tool_cat_btn"><i></i><span class="move_tool"><?php echo $mytheme_toolbar_tm2; ?></span></a>
     

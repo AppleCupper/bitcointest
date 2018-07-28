@@ -4,3 +4,5 @@ nav ul a.menuItem:hover{background-color: rgba(0,0,0,0.1);}
 .sign_center{width:60%;float:left;}
 .enter .sign_all{background:transparent;}
 .enter .sign_all h1{color:#005daa;text-align:center;font-size:2em;}
+
+nav.user-registration-MyAccount-navigation{background: transparent;height: auto;line-height: unset;}
